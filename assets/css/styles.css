@@ -1,0 +1,677 @@
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gaegu", sans-serif;
+}
+
+/* General Styling */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(7, 5, 56);
+  color: #fff;
+  cursor: url("../images/8.png"), auto;
+}
+
+/* Header Styling */
+header {
+  background-color: rgb(7, 5, 40);
+  padding: 10px 20px;
+  position: relative;
+}
+
+/* Navigation Styling */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-items {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-items a {
+  align-items: center;
+  color: #acb8dc;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-items a:hover {
+  color: rgba(0, 150, 255, 0.7);
+}
+
+/* Logo Styling */
+.logo-name {
+  display: flex;
+  align-items: center;
+}
+
+.logo-name a {
+  color: #acb8dc;
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
+.logo-name a:hover {
+  color: rgba(0, 150, 255, 0.7);
+}
+
+/* Logo Image Styling */
+.logo-name img {
+  height: 100px;
+  width: auto;
+  border-radius: 50px;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Neon Pulse Animation */
+@keyframes neon-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px 5px rgba(0, 150, 255, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 5px 2px rgba(0, 150, 255, 0);
+  }
+}
+@keyframes neon-pulse2 {
+    0%, 100% {
+      box-shadow: 0 0 20px 5px rgb(238, 163, 255);
+    }
+    50% {
+      box-shadow: 0 0 5px 2px rgba(0, 150, 255, 0);
+    }
+  }
+
+.logo-name img:hover {
+  animation: neon-pulse 5s infinite;
+}
+
+.aboutme {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.aboutme img {
+  border-radius: 23% 77% 78% 22% / 47% 48% 52% 53%;
+  height: 500px;
+  width: auto;
+  transition: box-shadow 0.3s ease;
+}
+
+.aboutme img:hover {
+  animation: neon-pulse 5s infinite;
+}
+
+/* Button Styling */
+.btn {
+  position: relative;
+  width: 355px;
+  height: 150px;
+  margin: 20px auto;
+  display: flex;
+}
+
+.btn a {
+  display: flex;
+  font-size: 2.5em;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.051);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(250, 52, 52, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 10;
+  color: #fff;
+  border-radius: 30px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: 0.5s;
+  overflow: hidden;
+  backdrop-filter: blur(15px);
+}
+
+.btn:hover a {
+  letter-spacing: 3px;
+}
+
+.btn a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.149), transparent);
+  transform: skewX(45deg);
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.btn a:hover::before {
+  transform: skewX(45deg) translateX(200%);
+  transition-delay: 0s;
+}
+
+.btn:before, .btn:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--clr-glow);
+  width: 30px;
+  height: 10px;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.btn:hover::before {
+  bottom: 0px;
+  height: 50%;
+  width: 80%;
+  border-radius: 30px;
+  transition-delay: 0.5s;
+}
+
+.btn:hover::after {
+  top: 0px;
+  height: 50%;
+  width: 80%;
+  border-radius: 30px;
+  transition-delay: 0.5s;
+}
+
+.btn:nth-child(1):before,
+.btn:nth-child(1):after {
+  background: var(--clr);
+  box-shadow: 0 0 5px var(--clr), 0 0 15px var(--clr), 0 0 30px var(--clr), 0 0 60px var(--clr);
+}
+.about-content {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+
+.education {
+    margin-top: 30px;
+    text-align: left;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 150, 255, 0.2);
+    position: relative; /* Required for positioning pseudo-elements */
+    overflow: hidden; /* Ensures the pseudo-elements do not overflow the container */
+}
+
+.about-content h3 {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #8bf5ff;
+}
+
+/* Pseudo-elements for glowing lines */
+.education::before,
+.education::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, rgba(45, 217, 254, 0.5), rgba(0, 0, 0, 0));
+    animation: glow-animation 3s linear infinite;
+}
+
+.education::before {
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 15px rgba(45, 217, 254, 0.7); /* Neon glow effect */
+}
+
+.education::after {
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg); /* Flip the gradient for the bottom line */
+    box-shadow: 0 0 15px rgba(45, 217, 254, 0.7);
+}
+
+/* Keyframes for glow animation */
+@keyframes glow-animation {
+    0% {
+        opacity: 0.3;
+        transform: translateX(-100%);
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    100% {
+        opacity: 0.3;
+        transform: translateX(100%);
+    }
+}
+@keyframes grid-line-animation {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+/* Grid lines styling */
+.grid-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none; /* Ensure grid lines do not interfere with interaction */
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(108, 210, 231, 0.5),
+        rgba(108, 210, 231, 0.5) 4px, /* Increase line thickness */
+        transparent 4px,
+        transparent 40px /* Increase space between lines */
+    ),
+    repeating-linear-gradient(
+        90deg,
+        rgba(108, 210, 231, 0.5),
+        rgba(108, 210, 231, 0.5) 4px, /* Increase line thickness */
+        transparent 4px,
+        transparent 40px /* Increase space between lines */
+    );
+    z-index: -1; /* Ensure grid lines are behind content */
+    box-shadow: 0 0 10px rgba(69, 221, 255, 0.956); /* Neon glow effect for grid lines */
+    animation: glow-animation 20s linear infinite; /* Apply the same glowing animation */
+    background-size: 100% 100%
+}
+
+
+/* Hero Section Styling */
+.hero {
+  background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(0, 150, 255, 0.7);
+}
+
+.hero p {
+  font-size: 1.5rem;
+  color: #dedede;
+  margin-top: 10px;
+}
+.hero a {
+    font-size: 1.5rem;
+    color: #ae00ff;
+    margin-top: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease, font-size 0.3s ease;
+    position: relative;
+  }
+  
+  /* Neon Glow Effect on Hover */
+  .hero a:hover {
+    color: #d79bed;
+    font-size: 1.8rem; /* Increase font size on hover */
+    animation: neon-pulse2 5s infinite;
+  }
+  
+  .hero a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(174, 0, 255, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1; /* Place it behind the text */
+  }
+  
+  .hero a:hover::before {
+    opacity: 1; /* Make the neon glow appear on hover */
+  }
+  
+
+/* Skills Section */
+.skills {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .skills-content {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+  }
+  
+  .skill-item {
+    background-color: rgb(7, 5, 40);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 150, 255, 0.3);
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+  }
+  
+  .skill-item:hover {
+    background-color: rgb(20, 20, 60); /* Lighter/different color on hover */
+    transform: scale(1.1); /* Makes the container bigger on hover */
+    box-shadow: 0 0 25px rgba(0, 150, 255, 0.5); /* Optional: enhanced shadow on hover */
+  }
+  
+  
+/* Projects Section */
+.projects {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.project-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.project-item {
+  background-color: rgb(7, 5, 40);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 150, 255, 0.3);
+  width: 300px;
+  text-align: center;
+}
+
+.project-item img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.project-item img:hover {
+  transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+    width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    background-color: transparent;
+    color: #ffffff;
+    margin: 2px; /* Adjust margin if needed */
+    border: 1px solid #fff; /* Adds a border with a white color */
+  }
+
+.contact button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(6, 0, 125);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+  background-color: rgba(0, 150, 255, 0.7);
+}
+
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 0;
+    gap: 20px; /* Space between the icons */
+  }
+  
+  .social-links a {
+    display: inline-block; /* Ensures the anchor tag behaves like an inline-block */
+    transition: transform 0.3s ease; /* Smooth hover animation */
+  }
+  
+  .social-links a:hover {
+    transform: scale(1.1); /* Slight zoom-in effect on hover */
+  }
+  
+  .social-links img {
+    width: 40px; /* Adjust the size of the icons */
+    height: 40px;
+    object-fit: contain; /* Ensures the image maintains its aspect ratio */
+  }
+  
+
+/* Footer Styling */
+footer {
+  background-color: rgb(7, 5, 40);
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+footer p {
+  color: #acb8dc;
+  margin-bottom: 10px;
+}
+
+footer nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+footer nav ul li a {
+  color: #acb8dc;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+footer nav ul li a:hover {
+  color: rgba(0, 150, 255, 0.7);
+}
+
+
+
+
+
+  
+
+.box:hover {
+    animation-play-state: paused;
+}
+
+.box {
+    margin-left: 650px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    width: 200px;
+    height: 300px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: animate 30s linear infinite;
+}
+
+
+@keyframes animate {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.box-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(240px);
+    text-decoration: none;
+    color: inherit; /* Ensure text color is inherited */
+}
+
+.box-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%; /* Adjust height to leave space for caption */
+    object-fit: cover;
+}
+
+.box-item .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%; /* Space for caption */
+    background: rgba(175, 96, 255, 0.637); /* Semi-transparent background for caption */
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px; /* Adjust font size as needed */
+    text-align: center;
+    padding: 5px; /* Adjust padding as needed */
+}
+
+.box span::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
+}
+
+
+
+
+
+
+body, html, #app {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  #app {
+    overflow: hidden;
+    touch-action: pan-up;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    text-shadow: 0 0 5px #ffffff, 0 0 20px #000, 0 0 30px #000;
+  }
+
+  #app h1 {
+    --fontSize: 40px;
+    --lineHeight: 80px;
+    width: auto;
+    height: calc(2 * var(--lineHeight));
+    line-height: var(--lineHeight);
+    margin: calc(50vh - var(--lineHeight)) auto 0;
+    font-size: var(--fontSize);
+    text-transform: uppercase;
+  }
+
+  #app a {
+    margin-top: 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  #app canvas {
+    display: block;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+  }
+
+
+  @media (max-width: 480px) {
+    /* Additional adjustments for very small screens */
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .hero button {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .skill-item,
+    .project-item {
+        width: 100%;
+    }
+}
