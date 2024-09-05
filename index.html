@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ME</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hello, I'm Youcef Kahlouche</h1>
+            <p>Web & Game Developer passionate about building innovative digital experiences.</p>
+            <a href="#projects" class="btn-hero">View My Work</a>
+        </div>
+    </section>
+    
+    <!-- About Me Section -->
+    <section class="aboutme" id="about">
+        <div class="about-content">
+            <div class="btn" style="--clr: #2dd9fe; --clr-glow:#00a3d5">
+                <a>About Me</a>
+            </div>
+            <img src="assets/images/me.png" alt="My Photo">
+            <p>I'm a developer skilled in C++, Python, Java, HTML, CSS, and JavaScript. I enjoy solving problems, creating interactive applications, and designing unique digital experiences. I have created several games and web projects, always striving for innovation and quality.</p>
+            
+            <!-- Education Section -->
+            <div class="education">
+                <div class="grid-lines"></div> <!-- Added grid lines container -->
+                <h3>Education</h3>
+                <ul>
+                    <li>
+                        <strong>Engineer Degree in Computer Science</strong><br>
+                        Higher School of Computer Science (ESI), Algiers, Algeria
+                    </li>
+                    <li>
+                        <strong>Master 2 Degree in Computer Science</strong><br>
+                        Higher School of Computer Science (ESI), Algiers, Algeria
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <div id="app"> </div>
+    
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="btn" style="--clr: #4400b2; --clr-glow:#00a3d5">
+            <a>Skills</a>
+        </div>
+        <div class="skills-content">
+            <div class="skill-item">
+                <h3>Web Development</h3>
+                <p>HTML, CSS, JavaScript</p>
+            </div>
+            <div class="skill-item">
+                <h3>Game Development</h3>
+                <p>C++, SFML, java</p>
+            </div>
+            <div class="skill-item">
+                <h3>Backend Development</h3>
+                <p>Python, Node.js</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="btn" style="--clr: #3629e8; --clr-glow:#00a3d5">
+            <a>Projects</a>
+        </div>
+        
+            <!-- Add more projects as needed -->
+            <div class="box">
+                
+                <a href="https://kingofdead6.github.io/the-good-one/" class="box-item" style="--i:3">
+                    <img src="assets/images/7.png" alt="Image 3">
+                    <div class="caption">E-Commerce site</div>
+                </a>
+                <a href="no.html" class="box-item" style="--i:4">
+                    <img src="assets/images/4.png" alt="Image 3">
+                    <div class="caption">TTS AI</div>
+                </a>
+                <a href="no.html" class="box-item" style="--i:5">
+                    <img src="assets/images/5.png" alt="Image 3">
+                    <div class="caption">QR-code Generator</div>
+                </a>
+                <a href="https://kingofdead6.github.io/clock/" class="box-item" style="--i:6">
+                    <img src="assets/images/6.png" alt="Image 3">
+                    <div class="caption">Real-time Clock</div>
+                </a>
+                <a href="https://kingofdead6.github.io/hotel/" class="box-item" style="--i:7">
+                    <img src="assets/images/1.png" alt="Image 3">
+                    <div class="caption">Hotel</div>
+                </a>
+                <a href="https://kingofdead6.github.io/Meteo/" class="box-item" style="--i:8">
+                    <img src="assets/images/9.png" alt="Image 3">
+                    <div class="caption">Meteo site</div>
+                </a>
+                <a href="https://github.com/kingofdead6/SuperMario" class="box-item" style="--i:9">
+                    <img src="assets/images/11.jpg" alt="Image 3">
+                    <div class="caption">Super-Mario game</div>
+                </a>
+                <a href="https://github.com/kingofdead6/Space_game" class="box-item" style="--i:10">
+                    <img src="assets/images/10.png" alt="Image 3">
+                    <div class="caption">Space ship game</div>
+                </a>
+               
+            </div>
+            
+        
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="btn" style="--clr: #ff2c41; --clr-glow:#00a3d5">
+            <a>Contact Me</a>
+        </div>
+        <form action="https://formspree.io/f/xeojdlnd" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn-contact">Send Message</button>
+        </form>
+        
+        <div class="social-links">
+            <a href="https://www.linkedin.com/feed/"><img src="assets/icons/linkedin.png" alt="LinkedIn"></a>
+            <a href="https://github.com/kingofdead6"><img src="assets/icons/github.png" alt="GitHub"></a>
+            <a href="https://www.instagram.com/lunarn_egga55/"><img src="assets/icons/instagram.png" alt="instagram"></a>
+        </div>
+    </section>
+    
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Youcef Kahlouche. All rights reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </footer>
+    
+  <script type="module">
+    import { neonCursor } from 'https://unpkg.com/threejs-toys@0.0.8/build/threejs-toys.module.cdn.min.js';
+
+neonCursor({
+    el: document.getElementById('app'),
+    shaderPoints: 16,
+    curvePoints: 80,
+    curveLerp: 0.5,
+    radius1: 5,
+    radius2: 30,
+    velocityTreshold: 10,
+    sleepRadiusX: 100,
+    sleepRadiusY: 100,
+    sleepTimeCoefX: 0.0025,
+    sleepTimeCoefY: 0.0025
+});
+  </script>
+</body>
+</html>
